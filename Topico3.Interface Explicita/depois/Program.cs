@@ -17,7 +17,7 @@ namespace Topico3
             funcionario.Nome = "josé da silva";
             funcionario.DataNascimento = new DateTime(2000, 1, 1);
 
-            //convertendo explicitamente a propriedade funcionario
+            //convertendo explicitamente a propriedade funcionario para as interfaces
             //é necessário usar essa técnica quando tem se duas interfaces com o mesmo método, mas com implementações diferentes
             ((IFuncionario)funcionario).CargaHorariaMensal = 168;
             ((IPlantonista)funcionario).CargaHorariaMensal = 32;
@@ -82,8 +82,10 @@ namespace Topico3
 
         public decimal Salario { get; }
 
+        //interface explicita
         int IFuncionario.CargaHorariaMensal { get; set; }
 
+        //interface explicita
         int IPlantonista.CargaHorariaMensal { get; set; }
 
         public Funcionario(decimal salario)
