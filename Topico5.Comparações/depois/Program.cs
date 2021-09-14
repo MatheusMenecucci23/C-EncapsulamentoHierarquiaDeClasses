@@ -57,7 +57,7 @@ namespace Topico5
                 aluno5
             };
 
-            //
+            //ordenação dos aluno, para esse método funcionar o IComparable.CompareTo tem que estar no código
             alunos.Sort();
 
 
